@@ -13,6 +13,11 @@ const Hero = ({}: Props) => {
     window.open("https://wa.me/5515997411076", "_blank");
   };
 
+  const handleCVButtonClick = () => {
+    window.location.href =
+      "https://drive.google.com/uc?export=download&id=10JEztLoneHLFCCIErFHcLddg7jjngdzK";
+  };
+
   return (
     <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[5vh] bg-cover bg-center">
       <Particle />
@@ -28,7 +33,10 @@ const Hero = ({}: Props) => {
             I&apos;m always looking for new opportunities and experiences!
           </p>
           <div className="mt-[2rem] flex-col space-y-6 sm:space-y-0 sm:flex sm:flex-row items-center sm:space-x-6">
-            <button className="px-[2rem] hover:bg-blue-400 transition-all duration-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black flex items-center space-x-2 rounded">
+            <button
+              onClick={handleCVButtonClick}
+              className="px-[2rem] hover:bg-blue-400 transition-all duration-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black flex items-center space-x-2 rounded"
+            >
               <p>Download CV</p>
               <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
