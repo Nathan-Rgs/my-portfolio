@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="bg-[#121121] pb-[3rem] md:pt-[8rem]">
+    <div className="bg-[#121121] pb-[3rem] pt-[2rem] md:pt-[8rem]">
       <div className="grid grid-cols-1 md:grid-cols-2 w-[80%] mx-auto gap-[3rem] items-center">
         <div>
           <h1 className="text-[20px] font-bold uppercase text-[#55e6a5] mb-[1rem]">
@@ -26,14 +26,17 @@ const About = () => {
             <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
           </button>
         </div>
-        <div className="lg:w-[500px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 lg:h-[500px] w-[300px] relative">
+        <div className="lg:w-[500px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 w-full h-auto relative">
           <Image
-            src="/images/me/armsCrossed.jpg"
+            src="/images/me/armsCrossed.png"
             alt="user"
-            layout="fill"
+            layout="responsive"
+            width={500}
+            height={500}
             objectFit="contain"
-            className="relative z-[11] w-[100%] h-[100%] object-contain rounded-md"
+            className="relative z-[11] rounded-md"
           />
+          <div className="absolute w-full h-full z-[10] bg-[#60a5fa] top-[-2rem] right-[-2rem] rounded-md"></div>
         </div>
       </div>
     </div>

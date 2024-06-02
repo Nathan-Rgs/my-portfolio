@@ -9,8 +9,12 @@ import TextEffect from "./TextEffect";
 interface Props {}
 
 const Hero = ({}: Props) => {
+  const handleContactButtonClick = () => {
+    window.open("https://wa.me/5515997411076", "_blank");
+  };
+
   return (
-    <div className="h-[88vh] bg-[url('/images/banner.jpg')] bg-cover bg-center">
+    <div className="h-[88vh] bg-[url('/images/banner.jpg')] mt-[5vh] bg-cover bg-center">
       <Particle />
       <div className="w-[80%] grid-cols-1 mx-auto grid lg:grid-cols-2 gap-[2rem] h-[100%] items-center">
         <div>
@@ -28,7 +32,10 @@ const Hero = ({}: Props) => {
               <p>Download CV</p>
               <ArrowDownTrayIcon className="w-[1.6rem] h-[1.7rem] text-black" />
             </button>
-            <button className="flex items-center space-x-3">
+            <button
+              className="flex items-center space-x-3"
+              onClick={handleContactButtonClick}
+            >
               <p className="text-[20px] font-semibold text-white">
                 Get in touch!
               </p>
@@ -38,7 +45,7 @@ const Hero = ({}: Props) => {
         </div>
         <div className="w-[500px] hidden relative lg:flex items-center rounded-full h-[500px] ">
           <Image
-            src="/images/me/hiVrNoBg.png"
+            src="/images/me/hiAr.jpg"
             alt="user"
             layout="fill"
             className="object-cover rounded-full"
