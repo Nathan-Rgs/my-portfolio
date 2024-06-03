@@ -44,7 +44,7 @@ const Hero = ({}: Props) => {
               className="flex items-center space-x-3"
               onClick={handleContactButtonClick}
             >
-              <p className="text-[20px] font-semibold text-white">
+              <p className="text-[20px] font-semibold text-white hover:text-blue-400">
                 Get in touch!
               </p>
               <ChatBubbleOvalLeftEllipsisIcon className="w-[2.5rem] h-[2.5rem] hover:text-blue-400 transition-all duration-200 text-[#55e6a5] rounded-md" />

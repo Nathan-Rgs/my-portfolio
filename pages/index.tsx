@@ -2,6 +2,9 @@ import About from "@/Components/About";
 import Hero from "@/Components/Hero";
 import MobileNav from "@/Components/MobileNav";
 import Nav from "@/Components/Nav";
+import Projects from "@/Components/Projects";
+import Services from "@/Components/Services";
+import Skills from "@/Components/Skills";
 import { useState } from "react";
 
 const Home = () => {
@@ -18,6 +21,9 @@ const Home = () => {
         <Hero />
         <div className="relative z-[30]">
           <About />
+          <Services />
+          <Skills />
+          <Projects />
         </div>
       </div>
     </div>
