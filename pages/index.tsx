@@ -1,7 +1,9 @@
 import About from "@/Components/About";
+import AcademicProfile from "@/Components/AcademicProfile";
 import Hero from "@/Components/Hero";
 import MobileNav from "@/Components/MobileNav";
 import Nav from "@/Components/Nav";
+import ProfessionalExperience from "@/Components/ProfessionalExperience";
 import Projects from "@/Components/Projects";
 import Services from "@/Components/Services";
 import Skills from "@/Components/Skills";
@@ -24,6 +26,8 @@ const Home = () => {
           <Services />
           <Skills />
           <Projects />
+          <ProfessionalExperience />
+          <AcademicProfile />
         </div>
       </div>
     </div>
