@@ -2,7 +2,10 @@ import ExperienceSlider from "./ExperienceSlider";
 
 const ProfessionalExperience = () => {
   return (
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]">
+    <div
+      id="experience"
+      className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[1rem]"
+    >
       <h1 className="heading">
         Professional <span className="text-blue-400">Experience</span>
       </h1>

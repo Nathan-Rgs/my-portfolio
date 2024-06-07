@@ -24,7 +24,10 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[4rem]">
+    <div
+      id="projects"
+      className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[4rem]"
+    >
       <h1 className="heading">
         Pro <span className="text-blue-400"> JeCt&apos;s </span>
       </h1>
