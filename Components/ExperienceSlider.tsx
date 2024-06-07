@@ -38,7 +38,7 @@ const ExperienceSlider = () => {
         role="Fullstack Developer"
         location_date="Sorocaba - Brazil, February 2024 - Nowadays"
         description="I'm on the backend team focusing on Node.js, NestJS and TypeScript. Using ORMs such as TypeORM and PrismaORM to develop robust and scalable solutions, ensuring that the backend of our systems is efficient and reliable.
-        In addition, I work on the development of full-stack applications, integrating React.js and Tailwind with the backend technologies mentioned. My goal is to provide exceptional user experiences, taking care of both the appearance and functionality of the applications.
+        In addition, I work on the development of fullstack applications, integrating React.js and Tailwind with the backend technologies mentioned. My goal is to provide exceptional user experiences, taking care of both the appearance and functionality of the applications.
         I am also responsible for ensuring the quality and performance of the final product. My day-to-day is a combination of leadership, technical development and quality assurance, always striving to deliver high-quality solutions for our clients."
       />
       <Companies
