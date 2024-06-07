@@ -3,12 +3,19 @@ import Image from "next/image";
 
 const AcademicProfile = () => {
   return (
-    <div className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]">
+    <div
+      id="education"
+      className="pt-[4rem] md:pt-[8rem] pb-[4rem] bg-[#02050a]"
+    >
       <h1 className="heading">
         Academic <span className="text-blue-400">background</span>
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-[4rem] gap-[3rem] w-[80%] mx-auto">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mt-[4rem] gap-[3rem] w-[80%] mx-auto">
+        <div
+          data-aos="fade-up"
+          className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
+          onClick={() => window.open("https://facens.br", "_blank")}
+        >
           <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/facens.png"
@@ -35,7 +42,12 @@ const AcademicProfile = () => {
             {/* <p className="text-white">Description</p> */}
           </div>
         </div>
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
+          onClick={() => window.open("https://www.sp.senai.br", "_blank")}
+        >
           <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/senai.png"
@@ -62,7 +74,12 @@ const AcademicProfile = () => {
             {/* <p className="text-white">Description</p> */}
           </div>
         </div>
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="600"
+          className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
+          onClick={() => window.open("shttps://www.wizard.com.br", "_blank")}
+        >
           <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/wizard.png"
@@ -89,7 +106,12 @@ const AcademicProfile = () => {
             {/* <p className="text-white">Description</p> */}
           </div>
         </div>
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="900"
+          className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
+          onClick={() => window.open("https://www.sesisp.org.br", "_blank")}
+        >
           <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/sesi.png"
