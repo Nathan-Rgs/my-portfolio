@@ -26,12 +26,12 @@ const Projects = () => {
   return (
     <div className="bg-[#02050a] pt-[4rem] md:pt-[8rem] pb-[4rem]">
       <h1 className="heading">
-        Pro <span className="text-blue-400"> Jetc </span>
+        Pro <span className="text-blue-400"> JeCt&apos;s </span>
       </h1>
       <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
         <div onClick={handleOnClickFrontEnd}>
-          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#55e6a5b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#55e6a5b7] transition-all duration-300 group-hover:bg-green-700">
+          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
               <BuildingStorefrontIcon className="h-10 w-10 text-white transition-all" />
             </span>
             <div className="relative z-10 mx-auto max-w-md">
@@ -56,8 +56,8 @@ const Projects = () => {
           </div>
         </div>
         <div onClick={handleOnClickFullstack}>
-          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#55e6a5b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#55e6a5b7] transition-all duration-300 group-hover:bg-green-700">
+          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
               <BuildingOffice2Icon className="h-10 w-10 text-white transition-all" />
             </span>
             <div className="relative z-10 mx-auto max-w-md">
@@ -81,8 +81,8 @@ const Projects = () => {
           </div>
         </div>
         <div onClick={handleOnClickBackend}>
-          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#55e6a5b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#55e6a5b7] transition-all duration-300 group-hover:bg-green-700">
+          <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+            <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
               <UsersIcon className="h-10 w-10 text-white transition-all" />
             </span>
             <div className="relative z-10 mx-auto max-w-md">
