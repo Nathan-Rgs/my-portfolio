@@ -3,6 +3,7 @@ import {
   EnvelopeIcon,
   MapIcon,
 } from "@heroicons/react/16/solid";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -62,14 +63,44 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between">
+      <div className="w-[80%] mt-[2rem] mx-auto flex items-center justify-between">
         <div className="text-[18px] mb-[2rem] md:mb-0 text-white opacity-20">
           Nathan Roberto | All rights Reserved
         </div>
         <div className="flex items-centers space-x-10">
-          <p className="text-[18px] text-white opacity-20">Terms & Condition</p>
-          <p className="text-[18px] text-white opacity-20">Provacy Policy</p>
-          <p className="text-[18px] text-white opacity-20">Sitemap</p>
+          <Image
+            src="instagram.svg"
+            width={40}
+            height={40}
+            alt="instagram"
+            className="cursor-pointer hover:scale-125"
+            onClick={() =>
+              window.open("https://www.instagram.com/_nathan_rgs/", "_blank")
+            }
+          />
+          <Image
+            src="github.svg"
+            width={40}
+            height={40}
+            alt="github"
+            className="cursor-pointer hover:scale-125"
+            onClick={() =>
+              window.open("https://github.com/Nathan-Rgs", "_blank")
+            }
+          />
+          <Image
+            src="linkedin.svg"
+            width={40}
+            height={40}
+            alt="linkedin"
+            className="cursor-pointer hover:scale-125"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/nathan-roberto-66423a18a/",
+                "_blank"
+              )
+            }
+          />
         </div>
       </div>
     </div>

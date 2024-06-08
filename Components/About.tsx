@@ -39,7 +39,7 @@ const About = () => {
           className="lg:w-[500px] mx-auto md:mx-0 mt-[2rem] lg:mt-0 w-full h-auto relative"
         >
           <Image
-            src="/images/me/armsCrossed.png"
+            src="/images/me/meLondon.jpeg"
             alt="user"
             layout="responsive"
             width={500}
