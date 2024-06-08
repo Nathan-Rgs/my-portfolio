@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
       <div className="w-[80%] mt-[2rem] mx-auto flex items-center justify-between">
         <div className="text-[18px] mb-[2rem] md:mb-0 text-white opacity-20">
-          Nathan Roberto | All rights Reserved
+          Nathan Roberto |
         </div>
         <div className="flex items-centers space-x-10">
           {/* <Image
