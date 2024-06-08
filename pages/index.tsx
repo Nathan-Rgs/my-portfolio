@@ -1,16 +1,16 @@
+import About from "@/components/About";
+import AcademicProfile from "@/components/AcademicBackground";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import MobileNav from "@/components/MobileNav";
+import Nav from "@/components/Nav";
+import ProfessionalExperience from "@/components/ProfessionalExperience";
+import Projects from "@/components/Projects";
+import Services from "@/components/Services";
+import Skills from "@/components/Skills";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useEffect, useState } from "react";
-import About from "../components/About";
-import AcademicProfile from "../components/AcademicBackground";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import MobileNav from "../components/MobileNav";
-import Nav from "../components/Nav";
-import ProfessionalExperience from "../components/ProfessionalExperience";
-import Projects from "../components/Projects";
-import Services from "../components/Services";
-import Skills from "../components/Skills";
 
 const Home = () => {
   const [nav, setNav] = useState(false);
