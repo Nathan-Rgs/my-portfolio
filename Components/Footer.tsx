@@ -68,7 +68,7 @@ const Footer = () => {
           Nathan Roberto | All rights Reserved
         </div>
         <div className="flex items-centers space-x-10">
-          <Image
+          {/* <Image
             src="instagram.svg"
             width={40}
             height={40}
@@ -77,7 +77,7 @@ const Footer = () => {
             onClick={() =>
               window.open("https://www.instagram.com/_nathan_rgs/", "_blank")
             }
-          />
+          /> */}
           <Image
             src="github.svg"
             width={40}
