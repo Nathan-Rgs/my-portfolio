@@ -64,11 +64,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-[80%] mt-[2rem] mx-auto flex items-center justify-between">
-        <div className="text-[18px] mb-[2rem] md:mb-0 text-white opacity-20">
-          Nathan Roberto |
+        <div className="flex items-centers text-[18px] md:mb-0 text-white opacity-20">
+          Nathan Roberto
         </div>
-        <div className="flex items-centers space-x-10">
-          {/* <Image
+        <div className="flex items-centers space-x-5">
+          <Image
             src="instagram.svg"
             width={40}
             height={40}
@@ -77,7 +77,7 @@ const Footer = () => {
             onClick={() =>
               window.open("https://www.instagram.com/_nathan_rgs/", "_blank")
             }
-          /> */}
+          />
           <Image
             src="github.svg"
             width={40}
