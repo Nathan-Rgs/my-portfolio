@@ -63,8 +63,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-[80%] mt-[2rem] mx-auto flex items-center justify-between">
-        <div className="flex items-centers text-[18px] md:mb-0 text-white opacity-20">
+      <div className="w-[80%] mt-[2rem] mx-auto flex flex-col items-center justify-between md:flex-row lg:flex-row">
+        <div className="flex items-centers mb-5 text-[18px] md:mb-0 text-white opacity-20">
           Nathan Roberto
         </div>
         <div className="flex items-centers space-x-5">
