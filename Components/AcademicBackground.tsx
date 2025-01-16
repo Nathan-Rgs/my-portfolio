@@ -1,5 +1,4 @@
 import { AcademicCapIcon, ClockIcon } from "@heroicons/react/16/solid";
-import Image from "next/image";
 
 const AcademicProfile = () => {
   return (
@@ -10,13 +9,13 @@ const AcademicProfile = () => {
       <h1 className="heading">
         Academic <span className="text-blue-400">background</span>
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mt-[4rem] gap-[3rem] w-[80%] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mt-[6rem] gap-y-[10rem] w-[80%] mx-auto">
         <div
           data-aos="fade-up"
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("https://facens.br", "_blank")}
         >
-          <div className="w-full relative h-[20rem] flex justify-center items-center">
+          {/* <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/facens.png"
               alt="facens"
@@ -24,7 +23,7 @@ const AcademicProfile = () => {
               height={250}
               className="object-cover w-full"
             />
-          </div>
+          </div> */}
           <div className="w-11/12 text-center mx-auto bg-[#09101a] relative p-8 mt-[-4rem]">
             <div className="w-fit px-8 py-4 bg-[#55e6a5] relative mt-[-3rem] text-black font-semibold text-lg mx-auto">
               Facens
@@ -48,7 +47,7 @@ const AcademicProfile = () => {
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("https://www.sp.senai.br", "_blank")}
         >
-          <div className="w-full relative h-[20rem] flex justify-center items-center">
+          {/* <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/senai.png"
               alt="senai"
@@ -56,7 +55,7 @@ const AcademicProfile = () => {
               height={250}
               className="object-cover w-full"
             />
-          </div>
+          </div> */}
           <div className="w-11/12 text-center mx-auto bg-[#09101a] relative p-8 mt-[-4rem]">
             <div className="w-fit px-8 py-4 bg-[#55e6a5] relative mt-[-3rem] text-black font-semibold text-lg mx-auto">
               Senai
@@ -80,7 +79,7 @@ const AcademicProfile = () => {
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("shttps://www.wizard.com.br", "_blank")}
         >
-          <div className="w-full relative h-[20rem] flex justify-center items-center">
+          {/* <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/wizard.png"
               alt="sesi"
@@ -88,7 +87,7 @@ const AcademicProfile = () => {
               height={250}
               className="object-cover w-full"
             />
-          </div>
+          </div> */}
           <div className="w-11/12 text-center mx-auto bg-[#09101a] relative p-8 mt-[-4rem]">
             <div className="w-fit px-8 py-4 bg-[#55e6a5] relative mt-[-3rem] text-black font-semibold text-lg mx-auto">
               Wizard
@@ -112,7 +111,7 @@ const AcademicProfile = () => {
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("https://www.sesisp.org.br", "_blank")}
         >
-          <div className="w-full relative h-[20rem] flex justify-center items-center">
+          {/* <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
               src="/images/academic/sesi.png"
               alt="sesi"
@@ -120,7 +119,7 @@ const AcademicProfile = () => {
               height={250}
               className="object-cover w-full"
             />
-          </div>
+          </div> */}
           <div className="w-11/12 text-center mx-auto bg-[#09101a] relative p-8 mt-[-4rem]">
             <div className="w-fit px-8 py-4 bg-[#55e6a5] relative mt-[-3rem] text-black font-semibold text-lg mx-auto">
               Sesi

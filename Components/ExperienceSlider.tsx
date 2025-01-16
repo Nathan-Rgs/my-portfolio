@@ -33,10 +33,21 @@ const ExperienceSlider = () => {
       itemClass="item"
     >
       <Companies
+        image="/images/companies/omie.png"
+        name="Omie"
+        role="Fullstack Developer"
+        location_date="Remote - Brazil, August 2024 - Nowadays"
+        description="Developing user interfaces, translating product requirements and graphic designs into functional and responsive code. I work on improving and maintaining the company's 
+        CRM (Customer Relationship Management), ensuring that they are up-to-date and scalable. I collaborate closely with the back-end team to integrate APIs and services, ensuring a smooth end-user experience. In addition, 
+        I participate in code reviews, share knowledge with the team and carry out tests to ensure product functionality. My background includes solid knowledge of JavaScript and practical 
+        experience with the Vue.js framework. I am proficient in the use of GitHub and agile development methodologies. I have the skills to develop solutions while remaining flexible enough 
+        to work in dynamic environments and adapt to changing priorities. I value attention to detail and the ability to manage multiple projects simultaneously, meeting deadlines."
+      />
+      <Companies
         image="/images/companies/epiousion.png"
         name="Epiousion IT"
         role="Fullstack Developer"
-        location_date="Sorocaba - Brazil, February 2024 - Nowadays"
+        location_date="Sorocaba - Brazil, February 2024 - August 2024"
         description="I'm on the backend team focusing on Node.js, NestJS and TypeScript. Using ORMs such as TypeORM and PrismaORM to develop robust and scalable solutions, ensuring that the backend of our systems is efficient and reliable.
         In addition, I work on the development of fullstack applications, integrating React.js and Tailwind with the backend technologies mentioned. My goal is to provide exceptional user experiences, taking care of both the appearance and functionality of the applications.
         I am also responsible for ensuring the quality and performance of the final product. My day-to-day is a combination of leadership, technical development and quality assurance, always striving to deliver high-quality solutions for our clients."
