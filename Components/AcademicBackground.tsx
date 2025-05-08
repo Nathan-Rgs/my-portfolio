@@ -14,6 +14,7 @@ const AcademicProfile = () => {
           data-aos="fade-up"
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("https://facens.br", "_blank")}
+          id="facens_academic"
         >
           {/* <div className="w-full relative h-[20rem] flex justify-center items-center">
             <Image
@@ -42,6 +43,7 @@ const AcademicProfile = () => {
           </div>
         </div>
         <div
+          id="senai_academic"
           data-aos="fade-up"
           data-aos-delay="300"
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
@@ -74,6 +76,7 @@ const AcademicProfile = () => {
           </div>
         </div>
         <div
+          id="wizard_academic"
           data-aos="fade-up"
           data-aos-delay="600"
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
@@ -106,6 +109,7 @@ const AcademicProfile = () => {
           </div>
         </div>
         <div
+        id="sesi_academic"
           data-aos="fade-up"
           data-aos-delay="900"
           className="hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div id="contact" className="pt-[8rem] pb-[4rem] bg-[#02050a]">
       <div className="grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 w-[80%] mx-auto gap-[3rem]">
-        <div
+        <div id="address_footer"
           className="flex items-center space-x-6 hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() =>
             window.open(
@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div
+        <div id="phone_footer"
           className="flex items-center space-x-6 hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => window.open("https://wa.me/5515997411076", "_blank")}
         >
@@ -46,7 +46,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div
+        <div id="mail_footer"
           className="flex items-center space-x-6 hover:cursor-pointer hover:-translate-y-1 hover:shadow-2xl"
           onClick={() => (window.location.href = "mailto:nathan.rgs@gmail.com")}
         >
@@ -68,7 +68,7 @@ const Footer = () => {
           Nathan Roberto
         </div>
         <div className="flex items-centers space-x-5">
-          <Image
+          <Image id="instagram_footer"
             src="instagram.svg"
             width={40}
             height={40}
@@ -78,7 +78,7 @@ const Footer = () => {
               window.open("https://www.instagram.com/_nathan_rgs/", "_blank")
             }
           />
-          <Image
+          <Image id="github_footer"
             src="github.svg"
             width={40}
             height={40}
@@ -88,7 +88,7 @@ const Footer = () => {
               window.open("https://github.com/Nathan-Rgs", "_blank")
             }
           />
-          <Image
+          <Image id="linkedin_footer"
             src="linkedin.svg"
             width={40}
             height={40}

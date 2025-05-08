@@ -31,7 +31,7 @@ const Projects = () => {
       <h1 className="heading">
         Pro <span className="text-blue-400"> JeCt&apos;s </span>
       </h1>
-      <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]">
+      <div className="w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]" id="capputeeno_project">
         <div onClick={handleOnClickFrontEnd}>
           <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
             <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
@@ -58,7 +58,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div onClick={handleOnClickFullstack}>
+        <div onClick={handleOnClickFullstack} id="reporteJa_project">
           <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
             <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
               <BuildingOffice2Icon className="h-10 w-10 text-white transition-all" />
@@ -83,7 +83,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div onClick={handleOnClickBackend}>
+        <div onClick={handleOnClickBackend} id="usersAuth_project">
           <div className="group relative cursor-pointer overflow-hidden bg-gray-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:bg-[#3b82f6b7] hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
             <span className="grid h-20 w-20 place-items-center rounded-full bg-[#3b82f6b7] transition-all duration-300 group-hover:bg-blue-800">
               <UsersIcon className="h-10 w-10 text-white transition-all" />

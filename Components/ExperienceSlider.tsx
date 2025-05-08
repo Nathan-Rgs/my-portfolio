@@ -31,6 +31,7 @@ const ExperienceSlider = () => {
       infinite
       responsive={responsive}
       itemClass="item"
+      id="carousel_companies"
     >
       <Companies
         image="/images/companies/omie.png"
