@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Image from "next/image"
 
 interface Props {
-  image: string;
-  name: string;
-  role: string;
-  location_date: string;
-  description: string;
+  image: string
+  name: string
+  role: string
+  location_date: string
+  description: string
+  id: string
 }
 
 const Companies = ({
@@ -14,9 +15,13 @@ const Companies = ({
   role,
   location_date,
   description,
+  id,
 }: Props) => {
   return (
-    <div className="flex flex-col text-center justify-center bg-gray-700 h-full w-full py-10 rounded-lg">
+    <div
+      className="flex flex-col text-center justify-center bg-gray-700 h-full w-full py-10 rounded-lg"
+      id={id}
+    >
       <Image
         src={image}
         alt={name}
@@ -34,7 +39,7 @@ const Companies = ({
         {description}
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Companies;
+export default Companies
