@@ -1,6 +1,6 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import Companies from "./Companies";
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+import Companies from "./Companies"
 
 const responsive = {
   desktop: {
@@ -18,7 +18,7 @@ const responsive = {
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
-};
+}
 
 const ExperienceSlider = () => {
   return (
@@ -33,6 +33,7 @@ const ExperienceSlider = () => {
       itemClass="item"
     >
       <Companies
+        id="carousel_omie"
         image="/images/companies/omie.png"
         name="Omie"
         role="Fullstack Developer"
@@ -44,6 +45,7 @@ const ExperienceSlider = () => {
         to work in dynamic environments and adapt to changing priorities. I value attention to detail and the ability to manage multiple projects simultaneously, meeting deadlines."
       />
       <Companies
+        id="carousel_epiousion"
         image="/images/companies/epiousion.png"
         name="Epiousion IT"
         role="Fullstack Developer"
@@ -53,6 +55,7 @@ const ExperienceSlider = () => {
         I am also responsible for ensuring the quality and performance of the final product. My day-to-day is a combination of leadership, technical development and quality assurance, always striving to deliver high-quality solutions for our clients."
       />
       <Companies
+        id="carousel_fraunhofer"
         image="/images/companies/fraunhofer.png"
         name="Fraunhofer IPT"
         role="Software Developer for Cloud Computing"
@@ -60,6 +63,7 @@ const ExperienceSlider = () => {
         description="Development and maintenance of cloud simulation interfaces, using React, Typescript, JavaScript and MUI on the front-end. Creation of microservices for automating engineering simulations with Python, focusing on parameter validation and CRUD operations. Management and integration of microservices in the cloud computing infrastructure, focusing on the organization and administration of parameters and dependencies. Development of microservices to unify simulation result files into a single structured HDF file, facilitating visualization and analysis. Experience with the acquisition, processing and analysis of data obtained during the milling of aero engine components, using LabView, DIAdem and GraphQL."
       />
       <Companies
+        id="carousel_huawei"
         image="/images/companies/huawei.png"
         name="Huawei"
         role="Web Development Internship"
@@ -68,6 +72,7 @@ const ExperienceSlider = () => {
         JavaScript, VueJs, HTML, CSS and SQL to the test, aiming for constant improvement and learning"
       />
       <Companies
+        id="carousel_vcp"
         image="/images/companies/vcp.png"
         name="VCP Automation"
         role="Mechatronics Technician"
@@ -75,7 +80,7 @@ const ExperienceSlider = () => {
         description="Working with IT, projecting parts in CAD, providing services, assembling and designing panels, among others"
       />
     </Carousel>
-  );
-};
+  )
+}
 
-export default ExperienceSlider;
+export default ExperienceSlider

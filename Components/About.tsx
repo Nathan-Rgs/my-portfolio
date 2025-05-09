@@ -26,7 +26,7 @@ const About = () => {
               <span className="text-slate-60000 font-bold"> - Bill Gates</span>
             </p>
           </div>
-          <button
+          <button id="download_cv_about"
             onClick={handleCVButtonClick}
             className="px-[2rem] hover:bg-blue-400 transition-all duration-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black flex items-center space-x-2 rounded"
           >
