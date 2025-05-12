@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
           cliques.push({ id: el.id, timestamp: Date.now(), coords: {
             x: event.clientX,
             y: event.clientY,
-          } }); // opcional: com timestamp
+          } });
           localStorage.setItem("divClicks", JSON.stringify(cliques));
           break;
         }
@@ -24,7 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
     document.addEventListener("click", handleClick);
 
-    // Intervalo para envio automático a cada 30 segundos
     const interval = setInterval(async () => {
       const stored = localStorage.getItem("divClicks");
       if (!stored) return;
@@ -39,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       const lastClick = cliques[cliques.length - 1];
     
       try {
-        await fetch("http://localhost:8001/api/click-track", {
+        await fetch("http://4.201.154.145:8000/api/click-track", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
