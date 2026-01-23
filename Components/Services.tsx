@@ -21,7 +21,7 @@ const Services = () => {
               Frontend
             </h1>
             <p className="text-[15px] text-[#d3d2d2] font-normal">
-              3 years of experience in web and mobile development, always
+              6 years of experience in web and mobile development, always
               seeking to evolve with the latest technologies on the market.
             </p>
           </div>
@@ -33,7 +33,7 @@ const Services = () => {
               Backend
             </h1>
             <p className="text-[15px] text-[#d3d2d2] font-normal">
-              1.5 year&apos;s experience developing api&apos;s and microservices
+              4.5 year&apos;s experience developing api&apos;s and microservices
               using a wide variety of architectures and databases.
             </p>
           </div>
