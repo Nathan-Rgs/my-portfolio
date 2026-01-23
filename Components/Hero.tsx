@@ -29,9 +29,12 @@ const Hero = () => {
           </h1>
           <TextEffect />
           <p className="mt-[1.5rem] text-[18px] text-[#ffffff92]">
-            Computer Engineering student with a solid academic base and valuable
-            international experience as a software developer in Germany,
-            I&apos;m always looking for new opportunities and experiences!
+            Detail-oriented Full Stack Developer with a solid background in
+            Computer Engineering and international experience as a software
+            developer in Germany. Skilled in building scalable web applications
+            using JavaScript, TypeScript, Node.js, and modern front-end
+            frameworks. Seeking to contribute to a product-driven team focused
+            on innovation, quality, and real-world impact.
           </p>
           <div className="mt-[2rem] flex-col space-y-6 sm:space-y-0 sm:flex sm:flex-row items-center sm:space-x-6">
             <button
@@ -54,9 +57,9 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="w-[500px] hidden relative lg:flex items-center rounded-full h-[500px] ">
+        <div className="w-[500px] ml-20 hidden relative lg:flex items-center rounded-full h-[500px] ">
           <Image
-            src="/images/me/ipt.jpg"
+            src="/images/me/professionalPhoto.jpeg"
             alt="user"
             layout="fill"
             className="object-cover rounded-full"

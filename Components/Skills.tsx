@@ -43,8 +43,8 @@ const Skills = () => {
           />
           <SkillsItem
             title="VueJs"
-            year="2022 - 2023"
-            description="Learned and put into practice in my first internship at Huawei"
+            year="2022 - Present"
+            description="Used in my first internship at Huawei and currently at Omie"
           />
           <SkillsItem
             title="Spring"

@@ -36,7 +36,7 @@ const AcademicProfile = () => {
               </div>
               <div className="flex items-center space-x-3 min-w-32">
                 <ClockIcon className="w-[2rem] mx-auto h-[2rem] text-[#55e6a5]" />
-                <p className="text-white">01/01/2020, Currently</p>
+                <p className="text-white">Jan 2020 - Dec 2025</p>
               </div>
             </div>
             {/* <p className="text-white">Description</p> */}
@@ -69,7 +69,7 @@ const AcademicProfile = () => {
               </div>
               <div className="flex items-center space-x-3 min-w-32">
                 <ClockIcon className="w-[2rem] mx-auto h-[2rem] text-[#55e6a5]" />
-                <p className="text-white">01/01/2018, 31/12/2019</p>
+                <p className="text-white">Jan 2017 - Dec 2019</p>
               </div>
             </div>
             {/* <p className="text-white">Description</p> */}
@@ -102,7 +102,7 @@ const AcademicProfile = () => {
               </div>
               <div className="flex items-center space-x-3 min-w-32">
                 <ClockIcon className="w-[2rem] mx-auto h-[2rem] text-[#55e6a5]" />
-                <p className="text-white">6 years</p>
+                <p className="text-white">Jan 2011 - Dec 2017</p>
               </div>
             </div>
             {/* <p className="text-white">Description</p> */}
@@ -135,7 +135,7 @@ const AcademicProfile = () => {
               </div>
               <div className="flex items-center space-x-3 min-w-32">
                 <ClockIcon className="w-[2rem] mx-auto h-[2rem] text-[#55e6a5]" />
-                <p className="text-white">01/01/2017, 31/12/2019</p>
+                <p className="text-white">Jan 2016 - Dec 2019</p>
               </div>
             </div>
             {/* <p className="text-white">Description</p> */}

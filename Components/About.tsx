@@ -1,11 +1,11 @@
-import { ArrowDownTrayIcon } from "@heroicons/react/16/solid";
-import Image from "next/image";
+import { ArrowDownTrayIcon } from "@heroicons/react/16/solid"
+import Image from "next/image"
 
 const About = () => {
   const handleCVButtonClick = () => {
     window.location.href =
-      "https://drive.google.com/uc?export=download&id=10JEztLoneHLFCCIErFHcLddg7jjngdzK";
-  };
+      "https://drive.google.com/uc?export=download&id=10JEztLoneHLFCCIErFHcLddg7jjngdzK"
+  }
 
   return (
     <div id="about" className="bg-[#121121] pb-[3rem] pt-[2rem] md:pt-[8rem]">
@@ -26,7 +26,8 @@ const About = () => {
               <span className="text-slate-60000 font-bold"> - Bill Gates</span>
             </p>
           </div>
-          <button id="download_cv_about"
+          <button
+            id="download_cv_about"
             onClick={handleCVButtonClick}
             className="px-[2rem] hover:bg-blue-400 transition-all duration-200 py-[1rem] text-[18px] font-bold uppercase bg-[#55e6a5] text-black flex items-center space-x-2 rounded"
           >
@@ -51,7 +52,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
