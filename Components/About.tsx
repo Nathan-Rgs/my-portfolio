@@ -4,7 +4,7 @@ import Image from "next/image"
 const About = () => {
   const handleCVButtonClick = () => {
     window.location.href =
-      "https://drive.google.com/uc?export=download&id=10JEztLoneHLFCCIErFHcLddg7jjngdzK"
+      "https://drive.google.com/file/d/1czCuP7hg740EeK8e_DSE12Xe61DFhIX5/view?usp=sharing"
   }
 
   return (
