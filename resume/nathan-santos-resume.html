@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathan Santos Resume</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page-width: 210mm;
+        --page-height: 297mm;
+        --page-padding: 14mm;
+        --text: #111111;
+        --muted: #333333;
+        --accent: #111111;
+        --accent-soft: #f2f2f2;
+        --rule: #a6a6a6;
+        --surface: #ffffff;
+        --page: #f3f3f3;
+        --link: #0b57d0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--page);
+        color: var(--text);
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .document {
+        width: var(--page-width);
+        margin: 0 auto;
+      }
+
+      .page {
+        width: var(--page-width);
+        min-height: var(--page-height);
+        padding: var(--page-padding);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        gap: 7mm;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 8mm;
+        align-items: center;
+        padding-bottom: 5mm;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .photo {
+        width: 28mm;
+        height: 28mm;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--rule);
+      }
+
+      .identity {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5mm;
+      }
+
+      .name {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--accent);
+      }
+
+      .role {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2mm 4mm;
+        font-size: 10.5px;
+        color: var(--muted);
+      }
+
+      .contact-list span::after {
+        content: "|";
+        margin-left: 4mm;
+        color: #666666;
+      }
+
+      .contact-list span:last-child::after {
+        content: "";
+        margin: 0;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: underline;
+        text-underline-offset: 1.5px;
+        word-break: break-word;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 0.9fr;
+        gap: 7mm;
+      }
+
+      .summary-card,
+      .side-card {
+        border: 1px solid var(--rule);
+        border-radius: 4mm;
+        padding: 5mm;
+        background: #ffffff;
+      }
+
+      .summary-card {
+        display: flex;
+        flex-direction: column;
+        gap: 3mm;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+      }
+
+      .summary-text {
+        margin: 0;
+        font-size: 11.4px;
+      }
+
+      .highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2mm;
+      }
+
+      .pill {
+        padding: 1.2mm 2.8mm;
+        border-radius: 3mm;
+        border: 1px solid var(--rule);
+        background: var(--accent-soft);
+        color: var(--text);
+        font-size: 9.6px;
+        font-weight: 700;
+      }
+
+      .side-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 4mm;
+      }
+
+      .compact-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6mm;
+        font-size: 10.6px;
+      }
+
+      .compact-list strong {
+        color: var(--accent);
+      }
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        gap: 4mm;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+      }
+
+      .section-header::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5mm;
+      }
+
+      .entry {
+        display: flex;
+        flex-direction: column;
+        gap: 2mm;
+        break-inside: avoid;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 6mm;
+      }
+
+      .entry-title {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .entry-company {
+        margin: 0.6mm 0 0;
+        font-size: 10.8px;
+        font-weight: 600;
+      }
+
+      .entry-meta {
+        min-width: 40mm;
+        text-align: right;
+        color: var(--muted);
+        font-size: 10.2px;
+      }
+
+      .bullet-list {
+        margin: 0;
+        padding-left: 4.8mm;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3mm;
+        font-size: 11px;
+      }
+
+      .bullet-list li::marker {
+        color: var(--accent);
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 7mm;
+      }
+
+      .skill-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 3mm;
+      }
+
+      .skill-row {
+        display: flex;
+        gap: 2.2mm;
+        align-items: baseline;
+        font-size: 10.6px;
+      }
+
+      .skill-row strong {
+        min-width: 26mm;
+        color: var(--accent);
+      }
+
+      .education-list,
+      .reference-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4mm;
+      }
+
+      .education-item,
+      .reference-item {
+        break-inside: avoid;
+      }
+
+      .edu-title,
+      .reference-name {
+        margin: 0;
+        font-size: 11.2px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .edu-meta,
+      .reference-role,
+      .reference-contact {
+        margin: 0.8mm 0 0;
+        font-size: 10.3px;
+        color: var(--muted);
+      }
+
+      .reference-contact a + a::before {
+        content: "|";
+        margin: 0 2.4mm 0 2mm;
+        color: #666666;
+      }
+
+      .url-label {
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .footer-note {
+        margin-top: auto;
+        padding-top: 3mm;
+        border-top: 1px solid var(--rule);
+        font-size: 9.6px;
+        color: var(--muted);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="document">
+      <section class="page">
+        <header class="hero">
+          <img
+            class="photo"
+            src="https://forma-storage-resumeleader-avatar.s3.us-east-1.amazonaws.com/unregistered/WhatsApp%20Image%202026-01-22%20at%2012.24.42.jpeg"
+            alt="Nathan Santos portrait"
+          />
+          <div class="identity">
+            <h1 class="name">Nathan Santos</h1>
+            <div class="role">Full Stack Developer</div>
+            <div class="contact-list">
+              <span>Sorocaba, Brazil</span>
+              <span
+                ><a href="mailto:nathan.rgs@gmail.com"
+                  >nathan.rgs@gmail.com</a
+                ></span
+              >
+              <span><a href="tel:+5515997411076">+55 15 99741-1076</a></span>
+              <span
+                ><span class="url-label">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/nathan-rgs/"
+                  >https://www.linkedin.com/in/nathan-rgs/</a
+                ></span
+              >
+              <span
+                ><span class="url-label">Portfolio:</span>
+                <a href="https://nathan-rgs.vercel.app/"
+                  >https://nathan-rgs.vercel.app/</a
+                ></span
+              >
+            </div>
+          </div>
+        </header>
+
+        <section class="intro-grid">
+          <article class="summary-card">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+              Detail-oriented Full Stack Developer with a Computer Engineering
+              background and international software development experience in
+              Germany. Builds scalable web products with TypeScript, Node.js,
+              React, Vue.js, and modern API architectures, with strong attention
+              to interface quality, reliability, and maintainability.
+            </p>
+            <div class="highlights">
+              <span class="pill">TypeScript</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">React</span>
+              <span class="pill">Vue.js</span>
+              <span class="pill">NestJS</span>
+              <span class="pill">PostgreSQL</span>
+            </div>
+          </article>
+
+          <div class="side-stack">
+            <aside class="side-card">
+              <h2 class="section-title">Core Strengths</h2>
+              <ul class="compact-list">
+                <li>
+                  <strong>Product delivery:</strong> production-ready front-end
+                  and full-stack execution
+                </li>
+                <li>
+                  <strong>Architecture:</strong> scalable APIs, data modeling,
+                  and system integration
+                </li>
+                <li>
+                  <strong>Collaboration:</strong> code review, design systems,
+                  and agile teamwork
+                </li>
+              </ul>
+            </aside>
+            <!-- <aside class="side-card">
+              <h2 class="section-title">Languages</h2>
+              <ul class="compact-list">
+                <li><strong>Portuguese:</strong> Native</li>
+                <li><strong>English:</strong> C1 Advanced</li>
+                <li><strong>German:</strong> A1</li>
+              </ul>
+            </aside> -->
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Professional Experience</h2>
+          </div>
+          <div class="experience-list">
+            <article class="entry">
+              <div class="entry-head">
+                <div>
+                  <h3 class="entry-title">Full Stack Developer</h3>
+                  <p class="entry-company">OMIE</p>
+                </div>
+                <div class="entry-meta">
+                  <div>Aug 2024 - Present</div>
+                  <div>Remote, Brazil</div>
+                </div>
+              </div>
+              <ul class="bullet-list">
+                <li>
+                  Developed responsive, maintainable interfaces from product
+                  requirements and UI/UX designs into production-ready code.
+                </li>
+                <li>
+                  Improved CRM scalability and stability to support continuous
+                  product evolution.
+                </li>
+                <li>
+                  Integrated APIs and services with back-end teams to ensure
+                  reliable data flow and smooth user experiences.
+                </li>
+                <li>
+                  Contributed to design system repositories, increasing
+                  component reuse and UI consistency.
+                </li>
+                <li>
+                  Worked with JavaScript, Vue.js, code reviews, and
+                  collaborative GitHub workflows in an agile environment.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div>
+                  <h3 class="entry-title">Full Stack Developer</h3>
+                  <p class="entry-company">Epiousion IT</p>
+                </div>
+                <div class="entry-meta">
+                  <div>Feb 2024 - Aug 2024</div>
+                  <div>Sorocaba, Brazil</div>
+                </div>
+              </div>
+              <ul class="bullet-list">
+                <li>
+                  Led back-end development with Node.js, NestJS, and TypeScript
+                  to deliver robust, scalable APIs.
+                </li>
+                <li>
+                  Built data access layers with TypeORM and Prisma ORM,
+                  improving consistency and performance.
+                </li>
+                <li>
+                  Delivered full-stack features with React and Tailwind across
+                  front-end and back-end layers.
+                </li>
+                <li>
+                  Worked with PostgreSQL, SQL Server, and MongoDB using solid
+                  data modeling practices.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div>
+                  <h3 class="entry-title">
+                    Software Developer for Cloud Computing
+                  </h3>
+                  <p class="entry-company">
+                    Fraunhofer Institute for Production Technology
+                  </p>
+                </div>
+                <div class="entry-meta">
+                  <div>Jan 2023 - Jan 2024</div>
+                  <div>Aachen, Germany</div>
+                </div>
+              </div>
+              <ul class="bullet-list">
+                <li>
+                  Developed cloud-based simulation interfaces with React,
+                  TypeScript, JavaScript, and MUI.
+                </li>
+                <li>
+                  Built Python microservices for engineering simulations with
+                  parameter validation and CRUD flows.
+                </li>
+                <li>
+                  Integrated microservices in cloud environments and
+                  consolidated outputs into structured HDF formats.
+                </li>
+                <li>
+                  Processed manufacturing data for aircraft engine component
+                  milling using LabVIEW, DIAdem, and GraphQL.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <div>
+                  <h3 class="entry-title">Web Development Intern</h3>
+                  <p class="entry-company">Huawei</p>
+                </div>
+                <div class="entry-meta">
+                  <div>May 2021 - Dec 2022</div>
+                  <div>Sorocaba, Brazil</div>
+                </div>
+              </div>
+              <ul class="bullet-list">
+                <li>
+                  Developed front-end features for websites and internal systems
+                  with JavaScript, Vue.js, HTML, and CSS.
+                </li>
+                <li>
+                  Implemented responsive interfaces focused on usability,
+                  performance, and visual consistency.
+                </li>
+                <li>
+                  Collaborated on database-driven features involving SQL-based
+                  data access.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page">
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Earlier Experience</h2>
+          </div>
+          <article class="entry">
+            <div class="entry-head">
+              <div>
+                <h3 class="entry-title">Mechatronics Technician</h3>
+                <p class="entry-company">VCP Industrial Automation</p>
+              </div>
+              <div class="entry-meta">
+                <div>Jan 2020 - May 2021</div>
+                <div>Sorocaba, Brazil</div>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                Provided IT support across software and hardware environments to
+                maintain operational continuity.
+              </li>
+              <li>Maintained internal websites and technical documentation.</li>
+              <li>
+                Designed mechanical components with CAD tools and supported
+                automation projects in multidisciplinary environments.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="two-column">
+          <div class="section">
+            <div class="section-header">
+              <h2 class="section-title">Education</h2>
+            </div>
+            <div class="education-list">
+              <article class="education-item">
+                <h3 class="edu-title">Computer Engineering</h3>
+                <p class="edu-meta">
+                  Facens - Sorocaba University of Engineering | Jan 2020 - Dec
+                  2025 | Sorocaba, Brazil
+                </p>
+              </article>
+              <article class="education-item">
+                <h3 class="edu-title">Mechatronics Technician</h3>
+                <p class="edu-meta">
+                  SENAI | Jan 2017 - Dec 2019 | Sorocaba, Brazil
+                </p>
+              </article>
+              <article class="education-item">
+                <h3 class="edu-title">English Studies</h3>
+                <p class="edu-meta">
+                  Wizard by Pearson | Jan 2011 - Dec 2017 | Sorocaba, Brazil
+                </p>
+              </article>
+              <article class="education-item">
+                <h3 class="edu-title">High School</h3>
+                <p class="edu-meta">
+                  CE SESI-123 | Jan 2016 - Dec 2019 | Sorocaba, Brazil
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skill-groups">
+              <div class="skill-row">
+                <strong>Front-end</strong
+                ><span
+                  >React, Vue.js, JavaScript, TypeScript, HTML, CSS, Tailwind,
+                  MUI</span
+                >
+              </div>
+              <div class="skill-row">
+                <strong>Back-end</strong
+                ><span
+                  >Node.js, NestJS, Express, Prisma ORM, TypeORM, API
+                  integration</span
+                >
+              </div>
+              <div class="skill-row">
+                <strong>Data</strong
+                ><span
+                  >PostgreSQL, SQL Server, MongoDB, SQL, database modeling</span
+                >
+              </div>
+              <div class="skill-row">
+                <strong>Workflow</strong
+                ><span
+                  >Git, GitHub, Postman, Insomnia, clean code, agile
+                  collaboration</span
+                >
+              </div>
+              <div class="skill-row">
+                <strong>Other</strong
+                ><span
+                  >Python, cloud computing, systems integration, simulation
+                  automation</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="two-column">
+          <div class="section">
+            <div class="section-header">
+              <h2 class="section-title">Selected References</h2>
+            </div>
+            <div class="reference-list">
+              <article class="reference-item">
+                <h3 class="reference-name">Talita Berbel</h3>
+                <p class="reference-role">
+                  Coordinator, Department of Computer Engineering
+                </p>
+                <p class="reference-contact">
+                  <span class="url-label">Email:</span>
+                  <a href="mailto:talita.berbel@facens.br"
+                    >talita.berbel@facens.br</a
+                  >
+                </p>
+              </article>
+              <article class="reference-item">
+                <h3 class="reference-name">Andreia Leles</h3>
+                <p class="reference-role">
+                  Dr, Department of Computer Engineering
+                </p>
+                <p class="reference-contact">
+                  <span class="url-label">Email:</span>
+                  <a href="mailto:andreia.leles@facens.br"
+                    >andreia.leles@facens.br</a
+                  >
+                </p>
+              </article>
+              <article class="reference-item">
+                <h3 class="reference-name">Karen Torres de Oliveira</h3>
+                <p class="reference-role">Senior Developer, Huawei Project</p>
+                <p class="reference-contact">
+                  <span class="url-label">Email:</span>
+                  <a href="mailto:karent.oliveira@huawei.com"
+                    >karent.oliveira@huawei.com</a
+                  >
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <h2 class="section-title">Professional Profile</h2>
+            </div>
+            <ul class="compact-list">
+              <li>
+                <strong>Working style:</strong> autonomous, versatile, and
+                self-taught in acquiring new knowledge.
+              </li>
+              <li>
+                <strong>Quality focus:</strong> maintainable code, interface
+                consistency, and dependable user-facing behavior.
+              </li>
+              <li>
+                <strong>Strength in teams:</strong> cross-functional
+                collaboration, delivery ownership, and clear technical
+                communication.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
