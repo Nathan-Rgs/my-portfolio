@@ -1,4 +1,5 @@
-import type { CSSProperties } from "react";
+import { PauseIcon, PlayIcon } from "@heroicons/react/24/solid";
+import { useState, type CSSProperties } from "react";
 import Reveal from "@/Components/ui/Reveal";
 import SectionHeading from "@/Components/ui/SectionHeading";
 import SpotlightCard from "@/Components/ui/SpotlightCard";
@@ -78,17 +79,34 @@ const Stack = () => (
       <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((s, i) => (
           <Reveal as="li" key={s.title} delay={(i % 3) * 0.1}>
-            <SpotlightCard className="h-full p-6">
-              <p className="font-mono text-xs uppercase text-muted">{s.since}</p>
+            <SpotlightCard className="flex h-full flex-col p-6">
+              <div className="flex items-center justify-between gap-2">
+                <p className="font-mono text-xs uppercase text-muted">{s.since}</p>
+                {s.academic && <span className="chip !border-a2/50 !text-ink">Academic</span>}
+              </div>
               <h3 className="mt-2 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-1 text-muted">{s.description}</p>
+              <p className="mt-1 flex-1 text-muted">{s.description}</p>
+              <ul className="mt-4 flex flex-wrap gap-1.5" aria-label={`${s.title} tools`}>
+                {s.tools.map((t) => <li key={t} className="chip">{t}</li>)}
+              </ul>
             </SpotlightCard>
           </Reveal>
         ))}
       </ul>
 
-      <div className="marquee mt-10 overflow-hidden">
-        <ul className="marquee-track" aria-label="Technologies">
+      <TechMarquee />
+    </div>
+  </section>
+);
+
+/** Infinite tech marquee with an explicit pause control (WCAG 2.2.2: moving content > 5s). */
+const TechMarquee = () => {
+  const [paused, setPaused] = useState(false);
+  const Icon = paused ? PlayIcon : PauseIcon;
+  return (
+    <div className="mt-10 flex items-center gap-3">
+      <div className="marquee min-w-0 flex-1 overflow-hidden">
+        <ul className="marquee-track" style={paused ? { animationPlayState: "paused" } : undefined} aria-label="Technologies">
           {[...stack, ...stack].map((t, i) => (
             <li key={i} className="chip" aria-hidden={i >= stack.length || undefined}>
               {t}
@@ -96,8 +114,16 @@ const Stack = () => (
           ))}
         </ul>
       </div>
+      <button
+        type="button"
+        onClick={() => setPaused(!paused)}
+        aria-label={paused ? "Play technology list animation" : "Pause technology list animation"}
+        className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line text-muted transition hover:text-ink"
+      >
+        <Icon className="h-4 w-4" aria-hidden="true" />
+      </button>
     </div>
-  </section>
-);
+  );
+};
 
 export default Stack;

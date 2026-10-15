@@ -28,7 +28,7 @@ export const navItems = [
   { href: "#about", label: "About" },
   { href: "#stack", label: "Stack", desktopOnly: true },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#experience", label: "Experience", desktopOnly: true },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -37,7 +37,7 @@ export const services = [
     title: "Frontend",
     years: "6 years",
     description:
-      "6 years of experience in web and mobile development, always seeking to evolve with the latest technologies on the market.",
+      "6 years of experience in web development, always seeking to evolve with the latest technologies on the market.",
   },
   {
     title: "Backend",
@@ -53,25 +53,66 @@ export const services = [
   },
 ];
 
-export const skills = [
-  { title: "React Developer", since: "2022 - Nowadays", description: "Interfaces, websites and systems" },
-  { title: "Node Developer", since: "2023 - Nowadays", description: "For API's and related backend applications" },
-  { title: "React Native", since: "2022 - Nowadays", description: "One of the first frameworks I learned and use frequently for mobile" },
-  { title: "Nest Developer", since: "2023 - Nowadays", description: "API's and Microservices for the most varied applications" },
-  { title: "VueJs", since: "2022 - Present", description: "Used in my first internship at Huawei and currently at Omie" },
-  { title: "Spring", since: "2024 - Nowadays", description: "I'm currently challenging myself once again to improve my knowledge of Java/Spring" },
+export type Skill = {
+  title: string;
+  since: string;
+  description: string;
+  tools: string[];
+  /** Experience comes only from university coursework, not professional work. */
+  academic?: boolean;
+};
+
+export const skills: Skill[] = [
+  {
+    title: "Vue.js",
+    since: "2021 - Present",
+    description: "Used in my first internship at Huawei and currently at Omie, building CRM flows and design-system components.",
+    tools: ["Vue.js", "JavaScript", "Design systems"],
+  },
+  {
+    title: "React + TypeScript",
+    since: "2022 - Present",
+    description: "Interfaces, websites and systems, from cloud simulation tools at Fraunhofer to full-stack products.",
+    tools: ["React", "TypeScript", "TanStack Query", "Zod", "shadcn/ui"],
+  },
+  {
+    title: "Node.js & NestJS",
+    since: "2023 - Present",
+    description: "APIs and microservices for the most varied applications; led back-end development at Epiousion IT.",
+    tools: ["Node.js", "NestJS", "Express"],
+  },
+  {
+    title: "Python & FastAPI",
+    since: "2023 - Present",
+    description: "Engineering microservices at Fraunhofer IPT and layered REST APIs with auth, migrations and tests.",
+    tools: ["Python", "FastAPI", "SQLAlchemy", "Pytest"],
+  },
+  {
+    title: "Databases & ORMs",
+    since: "2023 - Present",
+    description: "Relational and NoSQL data modeling with typed data-access layers.",
+    tools: ["PostgreSQL", "SQL Server", "MongoDB", "Prisma", "TypeORM", "Drizzle"],
+  },
+  {
+    title: "AI & Computer Vision",
+    since: "2024 - 2025",
+    description: "Academic experience only: object detection and gesture recognition projects from my Computer Engineering degree.",
+    tools: ["YOLOv8", "OpenCV", "MediaPipe", "scikit-learn"],
+    academic: true,
+  },
 ];
 
 export const stack = [
-  "TypeScript", "JavaScript", "Vue.js", "React", "React Native", "Next.js", "Node.js", "NestJS",
-  "Express", "Spring", "Java", "Python", "FastAPI", "PostgreSQL", "SQL Server", "MongoDB",
-  "SQL", "HTML", "CSS", "Tailwind",
+  "TypeScript", "JavaScript", "Vue.js", "React", "Next.js", "Vite", "TanStack Query", "Zod",
+  "shadcn/ui", "MUI", "Tailwind", "Node.js", "NestJS", "Express", "Python", "FastAPI",
+  "Java", "Spring", "GraphQL", "PostgreSQL", "SQL Server", "MongoDB", "Prisma", "Drizzle",
+  "SQLAlchemy", "Pytest", "Docker", "Git/GitHub", "React Native", "HTML", "CSS",
 ];
 
 /** Nodes shown in the Stack beam diagram: left = client, right = server. */
 export const beamNodes = {
   left: ["TypeScript", "Vue.js", "React"],
-  right: ["Node.js", "NestJS", "PostgreSQL"],
+  right: ["Node.js", "FastAPI", "PostgreSQL"],
 };
 
 export type Project = {
@@ -84,6 +125,8 @@ export type Project = {
   /** Visual style of the generated preview when there is no screenshot. */
   mock: "dashboard" | "api" | "vision" | "gesture" | "mobile";
   featured?: boolean;
+  /** University coursework project. */
+  academic?: boolean;
 };
 
 export const projects: Project[] = [
@@ -120,6 +163,7 @@ export const projects: Project[] = [
     tags: ["Python", "YOLOv8", "OpenCV"],
     repo: "https://github.com/Nathan-Rgs/computerVision-forbiddenObjects",
     mock: "vision",
+    academic: true,
   },
   {
     title: "Sign Language Detector",
@@ -128,6 +172,7 @@ export const projects: Project[] = [
     tags: ["Python", "MediaPipe", "scikit-learn"],
     repo: "https://github.com/Nathan-Rgs/signLanguageDetector",
     mock: "gesture",
+    academic: true,
   },
   {
     title: "eSports Duo Finder",
