@@ -188,6 +188,7 @@ export const experience = [
   {
     company: "Omie",
     logo: "/images/companies/omie.png",
+    url: "https://www.omie.com.br",
     role: "Fullstack Developer",
     location: "Remote - Brazil",
     period: "August 2024 - Present",
@@ -207,6 +208,7 @@ export const experience = [
   {
     company: "Fraunhofer IPT",
     logo: "/images/companies/fraunhofer.png",
+    url: "https://www.ipt.fraunhofer.de",
     role: "Software Developer for Cloud Computing",
     location: "Aachen - Germany",
     period: "January 2023 - January 2024",
@@ -216,6 +218,7 @@ export const experience = [
   {
     company: "Huawei",
     logo: "/images/companies/huawei.png",
+    url: "https://www.huawei.com",
     role: "Web Development Internship",
     location: "Sorocaba - Brazil",
     period: "May 2021 - December 2022",

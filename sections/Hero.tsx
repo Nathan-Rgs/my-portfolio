@@ -119,15 +119,37 @@ const Hero = () => (
         style={delay(1.3)}
       >
         <p className="eyebrow shrink-0 text-muted">── Worked at</p>
-        <ul className="flex flex-wrap gap-x-8 gap-y-3" aria-label="Companies">
-          {experience.slice(0, 4).map((c) => (
-            <li
-              key={c.company}
-              className="font-semibold uppercase tracking-wide text-muted transition hover:text-ink"
-            >
-              {c.company}
-            </li>
-          ))}
+        <ul className="flex flex-wrap items-center gap-4" aria-label="Companies">
+          {experience.slice(0, 4).map((c) => {
+            const logo = (
+              <Image
+                src={c.logo}
+                alt={c.url ? "" : `${c.company} logo`}
+                width={120}
+                height={40}
+                className="h-10 w-auto max-w-[8.5rem] object-contain"
+              />
+            )
+            const tile =
+              "flex h-14 items-center rounded-xl bg-white px-3 ring-1 ring-line"
+            return (
+              <li key={c.company}>
+                {c.url ? (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${c.company} (opens in a new tab)`}
+                    className={`${tile} transition hover:ring-2 hover:ring-ink/40`}
+                  >
+                    {logo}
+                  </a>
+                ) : (
+                  <span className={tile}>{logo}</span>
+                )}
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
