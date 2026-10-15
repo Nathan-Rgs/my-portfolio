@@ -29,7 +29,7 @@ const Experience = () => (
               <Image src={job.logo} alt="" width={40} height={40} className="mb-4 h-10 w-10 rounded-lg bg-white object-contain p-1 sm:hidden" />
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-lg font-semibold">
-                  {job.role} <span className="font-normal text-muted">@ {job.company}</span>
+                  {job.role} <span className="whitespace-nowrap font-normal text-muted">@ {job.company}</span>
                 </h3>
                 <span className={`chip ${job.current ? "!border-a3/40 !text-ink" : ""}`}>{job.period}</span>
               </div>

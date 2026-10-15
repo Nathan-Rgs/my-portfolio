@@ -25,9 +25,10 @@
   --line: 225 229 238;
   --ink: 11 13 18;
   --muted: 85 93 112;
-  --a1: 59 108 240;
+  /* Darker than dark-mode accents so 12px gradient labels pass AA (4.5:1) */
+  --a1: 47 92 220;
   --a2: 124 58 237;
-  --a3: 13 148 106;
+  --a3: 4 120 87;
   --glass: 255 255 255 / 0.65;
   --grid: 11 13 18 / 0.045;
   --glow: 0.28;

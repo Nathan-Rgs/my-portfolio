@@ -6,7 +6,7 @@ const Footer = () => (
       <p>
         © {new Date().getFullYear()} {profile.name} · {profile.location}
       </p>
-      <a href="#top" className="transition hover:text-ink">
+      <a href="#top" className="-my-3 inline-flex min-h-11 items-center transition hover:text-ink">
         Back to top ↑
       </a>
     </div>

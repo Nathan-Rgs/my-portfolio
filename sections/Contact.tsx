@@ -21,7 +21,7 @@ const Contact = () => (
         <SpotlightCard className="p-8 text-center sm:p-14">
           <p className="eyebrow grad-text">05 — Contact</p>
           <h2 className="mt-5 text-[clamp(2.2rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.045em]">
-            Have a product to build?
+            Have a product to build?{" "}
             <br />
             <span className="grad-text">Let&apos;s talk.</span>
           </h2>
@@ -40,18 +40,18 @@ const Contact = () => (
           <ul className="mt-10 flex flex-wrap justify-center gap-2 text-sm">
             {socials.map(({ id, href, label, Icon }) => (
               <li key={id}>
-                <a id={id} href={href} target="_blank" rel="noopener noreferrer" className="chip inline-flex items-center gap-2 !py-2 transition hover:!text-ink">
+                <a id={id} href={href} target="_blank" rel="noopener noreferrer" className="chip inline-flex min-h-11 items-center gap-2 !py-2 transition hover:!text-ink">
                   <Icon /> {label}
                 </a>
               </li>
             ))}
             <li>
-              <a id="download_cv_contact" href={links.cv} className="chip inline-flex items-center gap-2 !py-2 transition hover:!text-ink">
+              <a id="download_cv_contact" href={links.cv} className="chip inline-flex min-h-11 items-center gap-2 !py-2 transition hover:!text-ink">
                 <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" /> CV
               </a>
             </li>
             <li>
-              <a id="address_footer" href={links.maps} target="_blank" rel="noopener noreferrer" className="chip inline-flex items-center gap-2 !py-2 transition hover:!text-ink">
+              <a id="address_footer" href={links.maps} target="_blank" rel="noopener noreferrer" className="chip inline-flex min-h-11 items-center gap-2 !py-2 transition hover:!text-ink">
                 <MapPinIcon className="h-4 w-4" aria-hidden="true" /> {profile.location}
               </a>
             </li>

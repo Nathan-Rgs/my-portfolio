@@ -7,10 +7,9 @@ import { experience, links, profile } from "@/data/content";
 // hydration and doesn't delay LCP.
 const delay = (s: number) => ({ "--d": `${s}s` }) as CSSProperties;
 
-const words = [
-  ...["I", "build", "fast,", "reliable", "web", "products"].map((w) => ({ w, grad: false })),
-  ...["— end", "to", "end."].map((w) => ({ w, grad: true })),
-];
+const lead = ["I", "build", "fast,", "reliable", "web", "products"];
+const accent = ["— end", "to", "end."];
+const wordDelay = (i: number) => delay(0.15 + i * 0.08);
 
 const Hero = () => (
   <section id="top" className="relative isolate flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28">
@@ -29,13 +28,24 @@ const Hero = () => (
           </p>
 
           <h1 className="mt-6 text-display font-semibold">
-            {words.map(({ w, grad }, i) => (
+            {lead.map((w, i) => (
               <span key={w}>
-                <span className={`hero-in inline-block ${grad ? "grad-text" : ""}`} style={delay(0.15 + i * 0.08)}>
+                <span className="hero-in inline-block" style={wordDelay(i)}>
                   {w}
                 </span>{" "}
               </span>
             ))}
+            {/* Keep "— end to end." together on one line */}
+            <span className="whitespace-nowrap">
+              {accent.map((w, i) => (
+                <span key={w}>
+                  <span className="hero-in grad-text inline-block" style={wordDelay(lead.length + i)}>
+                    {w}
+                  </span>
+                  {i < accent.length - 1 && " "}
+                </span>
+              ))}
+            </span>
           </h1>
 
           <p className="hero-in mt-6 max-w-xl text-lg text-muted" style={delay(0.9)}>
@@ -80,13 +90,12 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="hero-in mt-20 flex flex-col gap-5 md:flex-row md:items-center" style={delay(1.3)}>
+      <div className="hero-in mt-20 flex flex-col gap-5 lg:flex-row lg:items-center" style={delay(1.3)}>
         <p className="eyebrow shrink-0 text-muted">── Worked at</p>
-        <ul className="flex flex-wrap gap-x-7 gap-y-4" aria-label="Companies">
+        <ul className="flex flex-wrap gap-x-8 gap-y-3" aria-label="Companies">
           {experience.slice(0, 4).map((c) => (
-            <li key={c.company} className="flex items-center gap-2.5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0">
-              <Image src={c.logo} alt="" width={28} height={28} className="h-7 w-7 rounded-md bg-white/90 object-contain p-0.5" />
-              <span className="font-semibold uppercase tracking-wide">{c.company}</span>
+            <li key={c.company} className="font-semibold uppercase tracking-wide text-muted transition hover:text-ink">
+              {c.company}
             </li>
           ))}
         </ul>

@@ -8,14 +8,14 @@ const Nav = () => (
       <a
         href="#top"
         aria-label="Nathan Roberto, back to top"
-        className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-a1 to-a2 font-mono text-xs font-medium text-white"
+        className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gradient-to-br from-a1 to-a2 font-mono text-xs font-medium text-white"
       >
         NR
       </a>
       <ul className="flex items-center overflow-x-auto text-sm text-muted [scrollbar-width:none]">
         {navItems.map(({ href, label, desktopOnly }) => (
           <li key={href} className={desktopOnly ? "hidden sm:block" : undefined}>
-            <a href={href} className="block whitespace-nowrap rounded-full px-2 py-2 transition hover:bg-ink/5 hover:text-ink sm:px-3">
+            <a href={href} className="block whitespace-nowrap rounded-full px-2 py-3 transition hover:bg-ink/5 hover:text-ink sm:px-3">
               {label}
             </a>
           </li>

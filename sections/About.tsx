@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import Reveal from "@/Components/ui/Reveal";
 import SectionHeading from "@/Components/ui/SectionHeading";
 import SpotlightCard from "@/Components/ui/SpotlightCard";
@@ -96,21 +96,33 @@ const About = () => {
   const [tab, setTab] = useState<Tab>("Profile");
   const reduced = useReducedMotion();
 
+  // WAI-ARIA tabs: Left/Right (and Home/End) move between tabs and activate them.
+  const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    const i = tabs.indexOf(tab);
+    const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (next === undefined) return;
+    e.preventDefault();
+    const t = tabs[(next + tabs.length) % tabs.length];
+    setTab(t);
+    document.getElementById(`tab-${t}`)?.focus();
+  };
+
   return (
     <section id="about" className="py-24 sm:py-32">
       <div className="container-page">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading eyebrow="01 — About me" title={<>Transforming <span className="grad-text">visions</span>.</>} />
-          <div role="tablist" aria-label="About sections" className="glass flex w-fit gap-1 !rounded-full p-1">
+          <div role="tablist" aria-label="About sections" onKeyDown={onKeyDown} className="glass flex w-fit gap-1 !rounded-full p-1">
             {tabs.map((t) => (
               <button
                 key={t}
                 role="tab"
                 id={`tab-${t}`}
                 aria-selected={tab === t}
-                aria-controls={`panel-${t}`}
+                aria-controls={tab === t ? `panel-${t}` : undefined}
+                tabIndex={tab === t ? 0 : -1}
                 onClick={() => setTab(t)}
-                className={`relative rounded-full px-4 py-2 text-sm transition ${tab === t ? "text-ink" : "text-muted hover:text-ink"}`}
+                className={`relative min-h-11 rounded-full px-4 py-2 text-sm transition ${tab === t ? "text-ink" : "text-muted hover:text-ink"}`}
               >
                 {tab === t && <motion.span layoutId="about-tab" className="absolute inset-0 rounded-full bg-ink/10" />}
                 <span className="relative">{t}</span>
@@ -124,7 +136,8 @@ const About = () => {
           role="tabpanel"
           id={`panel-${tab}`}
           aria-labelledby={`tab-${tab}`}
-          className="mt-12"
+          tabIndex={0}
+          className="mt-12 rounded-[20px]"
           initial={reduced ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

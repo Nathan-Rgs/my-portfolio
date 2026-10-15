@@ -121,17 +121,20 @@ const ProjectCard = ({ project }: { project: Project }) => (
   >
     <Preview project={project} />
     <div className={`flex flex-col p-4 ${project.featured ? "" : "flex-1"}`}>
-      <h3 className={`font-semibold ${project.featured ? "text-2xl" : "text-lg"}`}>{project.title}</h3>
+      <div className="flex items-start justify-between gap-2">
+        <h3 className={`font-semibold ${project.featured ? "text-2xl" : "text-lg"}`}>{project.title}</h3>
+        {project.academic && <span className="chip mt-0.5 shrink-0 !border-a2/50 !text-ink">Academic</span>}
+      </div>
       <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
       <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies">
         {project.tags.map((t) => <li key={t} className="chip">{t}</li>)}
       </ul>
-      <div className="mt-5 flex gap-4 text-sm font-medium">
-        <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 underline-offset-4 hover:underline">
+      <div className="mt-2 flex gap-4 text-sm font-medium">
+        <a href={project.repo} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:underline">
           <GitHubIcon /> Code <span className="sr-only">for {project.title} on GitHub</span>
         </a>
         {project.live && (
-          <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 underline-offset-4 hover:underline">
+          <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-1.5 underline-offset-4 hover:underline">
             Live <ArrowUpRightIcon className="h-3.5 w-3.5" aria-hidden="true" /><span className="sr-only">demo of {project.title}</span>
           </a>
         )}
@@ -146,7 +149,7 @@ const Projects = () => (
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <SectionHeading eyebrow="03 — Projects" title="Selected work." />
         <Reveal>
-          <a href={links.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-sm text-muted transition hover:text-ink">
+          <a href={links.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-mono text-sm text-muted transition hover:text-ink">
             <GitHubIcon /> All repositories →
           </a>
         </Reveal>
@@ -154,7 +157,7 @@ const Projects = () => (
 
       <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
-          <Reveal as="li" key={p.title} delay={(i % 3) * 0.1} className={p.featured ? "md:col-span-2 lg:row-span-2" : undefined}>
+          <Reveal as="li" key={p.title} delay={(i % 3) * 0.1} className={p.featured ? "md:col-span-2 lg:row-span-2" : "md:last:col-span-2 lg:last:col-span-1"}>
             <ProjectCard project={p} />
           </Reveal>
         ))}

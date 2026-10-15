@@ -25,7 +25,7 @@ const ThemeToggle = () => {
       type="button"
       onClick={toggle}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-      className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-muted transition hover:bg-ink/5 hover:text-ink"
+      className="grid h-11 w-11 shrink-0 place-items-center rounded-full text-muted transition hover:bg-ink/5 hover:text-ink"
     >
       <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
     </button>
