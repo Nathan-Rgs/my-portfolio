@@ -1,18 +1,21 @@
-import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
-import type { CSSProperties } from "react";
-import { experience, links, profile } from "@/data/content";
+import { experience, links, profile } from "@/data/content"
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
+import type { CSSProperties } from "react"
 
 // Hero entrance uses CSS (.hero-in) rather than framer-motion so it starts before
 // hydration and doesn't delay LCP.
-const delay = (s: number) => ({ "--d": `${s}s` }) as CSSProperties;
+const delay = (s: number) => ({ "--d": `${s}s` }) as CSSProperties
 
-const lead = ["I", "build", "fast,", "reliable", "web", "products"];
-const accent = ["— end", "to", "end."];
-const wordDelay = (i: number) => delay(0.15 + i * 0.08);
+const lead = ["I", "build", "fast,", "reliable", "web", "products"]
+const accent = ["end", "to", "end."]
+const wordDelay = (i: number) => delay(0.15 + i * 0.08)
 
 const Hero = () => (
-  <section id="top" className="relative isolate flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28">
+  <section
+    id="top"
+    className="relative isolate flex min-h-[100svh] items-center overflow-hidden pb-16 pt-28"
+  >
     <div className="aurora -z-10" aria-hidden="true">
       <div className="blob b1" />
       <div className="blob b2" />
@@ -23,8 +26,12 @@ const Hero = () => (
     <div className="container-page">
       <div className="grid items-center gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-8">
         <div>
-          <p className="hero-in chip inline-flex items-center gap-2.5 !px-3 !py-1.5 !text-ink" style={delay(0.05)}>
-            <span className="pulse-dot" aria-hidden="true" /> Open to new opportunities
+          <p
+            className="hero-in chip inline-flex items-center gap-2.5 !px-3 !py-1.5 !text-ink"
+            style={delay(0.05)}
+          >
+            <span className="pulse-dot" aria-hidden="true" /> Open to new
+            opportunities
           </p>
 
           <h1 className="mt-6 text-display font-semibold">
@@ -39,7 +46,10 @@ const Hero = () => (
             <span className="whitespace-nowrap">
               {accent.map((w, i) => (
                 <span key={w}>
-                  <span className="hero-in grad-text inline-block" style={wordDelay(lead.length + i)}>
+                  <span
+                    className="hero-in grad-text inline-block"
+                    style={wordDelay(lead.length + i)}
+                  >
                     {w}
                   </span>
                   {i < accent.length - 1 && " "}
@@ -48,10 +58,17 @@ const Hero = () => (
             </span>
           </h1>
 
-          <p className="hero-in mt-6 max-w-xl text-lg text-muted" style={delay(0.9)}>
-            <span className="font-medium text-ink">{profile.role}</span> · TypeScript · Vue · React · Node
+          <p
+            className="hero-in mt-6 max-w-xl text-lg text-muted"
+            style={delay(0.9)}
+          >
+            <span className="font-medium text-ink">{profile.role}</span> ·
+            TypeScript · Vue · React · Node
           </p>
-          <p className="hero-in mt-2 font-mono text-sm text-muted" style={delay(1)}>
+          <p
+            className="hero-in mt-2 font-mono text-sm text-muted"
+            style={delay(1)}
+          >
             Now at Omie · Ex-Fraunhofer IPT (Germany) · {profile.location}
           </p>
 
@@ -62,7 +79,8 @@ const Hero = () => (
               </span>
             </a>
             <a href={links.cv} id="download_cv_hero" className="btn-ghost">
-              <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" /> Download CV
+              <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" />{" "}
+              Download CV
             </a>
           </div>
         </div>
@@ -80,21 +98,33 @@ const Hero = () => (
                 className="h-full w-full rounded-full border-4 border-bg object-cover"
               />
             </div>
-            <div className="hero-in glass absolute -bottom-2 -left-4 !rounded-2xl px-4 py-3 sm:-left-10" style={delay(0.6)}>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-muted">Experience</p>
+            <div
+              className="hero-in glass absolute -bottom-2 -left-4 !rounded-2xl px-4 py-3 sm:-left-10"
+              style={delay(0.6)}
+            >
+              <p className="font-mono text-[11px] uppercase tracking-widest text-muted">
+                Experience
+              </p>
               <p className="text-xl font-semibold">
-                {profile.yearsOfExperience} years <span className="text-sm font-normal text-muted">building</span>
+                {profile.yearsOfExperience} years{" "}
+                <span className="text-sm font-normal text-muted">building</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-in mt-20 flex flex-col gap-5 lg:flex-row lg:items-center" style={delay(1.3)}>
+      <div
+        className="hero-in mt-20 flex flex-col gap-5 lg:flex-row lg:items-center"
+        style={delay(1.3)}
+      >
         <p className="eyebrow shrink-0 text-muted">── Worked at</p>
         <ul className="flex flex-wrap gap-x-8 gap-y-3" aria-label="Companies">
           {experience.slice(0, 4).map((c) => (
-            <li key={c.company} className="font-semibold uppercase tracking-wide text-muted transition hover:text-ink">
+            <li
+              key={c.company}
+              className="font-semibold uppercase tracking-wide text-muted transition hover:text-ink"
+            >
               {c.company}
             </li>
           ))}
@@ -102,6 +132,6 @@ const Hero = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Hero;
+export default Hero
