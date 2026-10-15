@@ -1,64 +1,53 @@
-import About from "@/Components/About";
-import AcademicProfile from "@/Components/AcademicBackground";
-import Footer from "@/Components/Footer";
-import Hero from "@/Components/Hero";
-import MobileNav from "@/Components/MobileNav";
-import Nav from "@/Components/Nav";
-import ProfessionalExperience from "@/Components/ProfessionalExperience";
-import Projects from "@/Components/Projects";
-import Services from "@/Components/Services";
-import Skills from "@/Components/Skills";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-import { useEffect, useState } from "react";
+import Head from "next/head";
+import { profile } from "@/data/content";
+import About from "@/sections/About";
+import Contact from "@/sections/Contact";
+import Experience from "@/sections/Experience";
+import Footer from "@/sections/Footer";
+import Hero from "@/sections/Hero";
+import Nav from "@/sections/Nav";
+import Projects from "@/sections/Projects";
+import Stack from "@/sections/Stack";
 
-const Home = () => {
-  const [nav, setNav] = useState(false);
-  const openNav = () => setNav(true);
-  const closeNav = () => setNav(false);
+const SITE_URL = "https://nathan-rgs.vercel.app";
+const title = `${profile.name} — ${profile.role}`;
+const description =
+  "Full Stack Developer building fast, reliable web products with TypeScript, Vue, React and Node.js. Now at Omie, previously Fraunhofer IPT in Germany.";
 
-  useEffect(() => {
-    AOS.init({
-      // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-      initClassName: "aos-init", // class applied after initialization
-      animatedClassName: "aos-animate", // class applied on animation
-      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+const Home = () => (
+  <>
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#07080C" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="canonical" href={SITE_URL} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={SITE_URL} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={`${SITE_URL}${profile.photo}`} />
+      <meta name="twitter:card" content="summary" />
+    </Head>
 
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 400, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
-    });
-  }, []);
-
-  return (
-    <div className="overflow-x-hidden">
-      <div>
-        <MobileNav nav={nav} closeNav={closeNav} />
-        <Nav openNav={openNav} />
-
-        <Hero />
-        <div className="relative z-[30]">
-          <About />
-          <Services />
-          <Skills />
-          <ProfessionalExperience />
-          <Projects />
-          <AcademicProfile />
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
-};
+    <a
+      href="#main"
+      className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2"
+    >
+      Skip to content
+    </a>
+    <Nav />
+    <main id="main">
+      <Hero />
+      <About />
+      <Stack />
+      <Projects />
+      <Experience />
+      <Contact />
+    </main>
+    <Footer />
+  </>
+);
 
 export default Home;
