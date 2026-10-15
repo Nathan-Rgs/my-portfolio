@@ -1,18 +1,18 @@
-import Head from "next/head";
-import { profile } from "@/data/content";
-import About from "@/sections/About";
-import Contact from "@/sections/Contact";
-import Experience from "@/sections/Experience";
-import Footer from "@/sections/Footer";
-import Hero from "@/sections/Hero";
-import Nav from "@/sections/Nav";
-import Projects from "@/sections/Projects";
-import Stack from "@/sections/Stack";
+import { profile } from "@/data/content"
+import About from "@/sections/About"
+import Contact from "@/sections/Contact"
+import Experience from "@/sections/Experience"
+import Footer from "@/sections/Footer"
+import Hero from "@/sections/Hero"
+import Nav from "@/sections/Nav"
+import Projects from "@/sections/Projects"
+import Stack from "@/sections/Stack"
+import Head from "next/head"
 
-const SITE_URL = "https://nathan-rgs.vercel.app";
-const title = `${profile.name} — ${profile.role}`;
+const SITE_URL = "https://nathan-rgs.vercel.app"
+const title = `${profile.name}, ${profile.role}`
 const description =
-  "Full Stack Developer building fast, reliable web products with TypeScript, Vue, React and Node.js. Now at Omie, previously Fraunhofer IPT in Germany.";
+  "Full Stack Developer building fast, reliable web products with TypeScript, Vue, React and Node.js. Now at Omie, previously Fraunhofer IPT in Germany."
 
 const Home = () => (
   <>
@@ -48,6 +48,6 @@ const Home = () => (
     </main>
     <Footer />
   </>
-);
+)
 
-export default Home;
+export default Home
