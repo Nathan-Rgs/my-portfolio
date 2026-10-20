@@ -5,7 +5,7 @@ export const profile = {
   photo: "/images/me/professionalPhoto.jpeg",
   aboutPhoto: "/images/me/meLondon.jpeg",
   summary:
-    "Full Stack Developer with a Computer Engineering background and international experience in Germany. At Omie I build CRM features end to end: Python and FastAPI services on AWS Serverless (Lambda, SQS, DynamoDB) on the back end, Vue and React on the front end, plus integrations like Zoom and an AI-assisted sales flow. I care about the business domain as much as the code.",
+    "Full Stack Developer with a Computer Engineering background and international experience in Germany. At Omie I build CRM features end to end: Python and FastAPI services on AWS Serverless (Lambda, SQS, DynamoDB) on the back end and mainly Vue on the front end (sometimes also using React), plus external integrations with a variey of systems and an AI-assisted sales flow. I care about the business domain as much as the code.",
   quote: {
     text: "Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains",
     author: "Bill Gates",
@@ -21,6 +21,7 @@ export const links = {
   github: "https://github.com/Nathan-Rgs",
   linkedin: "https://www.linkedin.com/in/nathan-rgs/",
   instagram: "https://www.instagram.com/_nathan_rgs/",
+  aws: "https://www.credly.com/badges/28a4540b-7bc6-41b2-b1e3-29f8fbdd24c3",
   maps: "https://www.google.com/maps/place/sorocaba/data=!4m2!3m1!1s0x94c58abceb48f503:0x947f99ac59d0781b",
 }
 

@@ -31,15 +31,30 @@ const Profile = () => (
           <ArrowDownTrayIcon className="h-4 w-4" aria-hidden="true" /> Download CV
         </a>
       </div>
-      <div className="glass mx-auto w-full max-w-sm overflow-hidden p-2">
-        <Image
-          src={profile.aboutPhoto}
-          alt={`${profile.name} in London`}
-          width={500}
-          height={500}
-          sizes="(min-width: 1024px) 384px, 90vw"
-          className="aspect-square w-full rounded-[14px] object-cover"
-        />
+      <div className="relative mx-auto w-full max-w-sm">
+        <div className="glass overflow-hidden p-2">
+          <Image
+            src={profile.aboutPhoto}
+            alt={`${profile.name} in London`}
+            width={500}
+            height={500}
+            sizes="(min-width: 1024px) 384px, 90vw"
+            className="aspect-square w-full rounded-[14px] object-cover"
+          />
+        </div>
+        <a
+          href={links.aws}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="aws_certification_about"
+          aria-label="AWS Certified Cloud Practitioner credential (opens in a new tab)"
+          className="glass absolute -bottom-4 -right-2 !rounded-2xl px-4 py-3 transition hover:ring-2 hover:ring-ink/40 sm:-right-6"
+        >
+          <p className="font-mono text-[11px] uppercase tracking-widest text-muted">Certified</p>
+          <p className="text-xl font-semibold">
+            AWS <span className="text-sm font-normal text-muted">Cloud Practitioner</span>
+          </p>
+        </a>
       </div>
     </div>
 
