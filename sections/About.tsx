@@ -22,7 +22,7 @@ const Profile = () => (
   <>
     <div className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
       <div>
-        <p className="text-xl leading-relaxed text-muted sm:text-2xl">{profile.summary}</p>
+        <p className="text-lg leading-relaxed text-muted sm:text-xl">{profile.summary}</p>
         <blockquote className="mt-8 border-l-2 border-a2/60 pl-5 text-muted">
           <p>“{profile.quote.text}”</p>
           <footer className="mt-2 font-mono text-sm text-ink">— {profile.quote.author}</footer>

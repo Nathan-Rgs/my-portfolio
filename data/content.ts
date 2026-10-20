@@ -5,7 +5,7 @@ export const profile = {
   photo: "/images/me/professionalPhoto.jpeg",
   aboutPhoto: "/images/me/meLondon.jpeg",
   summary:
-    "Full Stack Developer with a Computer Engineering background and international experience in Germany. At Omie I build CRM features end to end: Python and FastAPI services on AWS Serverless (Lambda, SQS, DynamoDB) on the back end and mainly Vue on the front end (sometimes also using React), plus external integrations with a variey of systems and an AI-assisted sales flow. I care about the business domain as much as the code.",
+    "Full Stack Developer with a Computer Engineering degree and international experience at Fraunhofer IPT in Germany. At Omie, I build CRM features end to end: Python and FastAPI services on AWS Serverless (Lambda, SQS, DynamoDB) on the back end, Vue on the front end with some React, plus integrations with external platforms and an AI-assisted sales flow. I work close to product: I write the technical refinement of each feature before building it and join design reviews, so what ships solves the real business problem.",
   quote: {
     text: "Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains",
     author: "Bill Gates",
