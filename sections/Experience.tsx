@@ -35,6 +35,11 @@ const Experience = () => (
               </div>
               <p className="mt-1 font-mono text-xs text-muted">{job.location}</p>
               <p className="mt-3 leading-relaxed text-muted">{job.description}</p>
+              <ul className="mt-4 flex flex-wrap gap-1.5" aria-label={`Stack at ${job.company}`}>
+                {job.stack.map((t) => (
+                  <li key={t} className={`chip ${job.highlight.includes(t) ?"!border-a3/50 !text-ink" : ""}`}>{t}</li>
+                ))}
+              </ul>
             </SpotlightCard>
           </Reveal>
         ))}

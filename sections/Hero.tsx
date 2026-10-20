@@ -63,13 +63,13 @@ const Hero = () => (
             style={delay(0.9)}
           >
             <span className="font-medium text-ink">{profile.role}</span> ·
-            TypeScript · Vue · React · Node
+            Python · FastAPI · AWS · Vue · React
           </p>
           <p
             className="hero-in mt-2 font-mono text-sm text-muted"
             style={delay(1)}
           >
-            Now at Omie · Ex-Fraunhofer IPT (Germany) · {profile.location}
+            Now at Omie · Ex-Fraunhofer IPT (Germany) · AWS Certified · {profile.location}
           </p>
 
           <div className="hero-in mt-9 flex flex-wrap gap-3" style={delay(1.1)}>

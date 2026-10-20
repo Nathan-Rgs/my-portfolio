@@ -12,7 +12,7 @@ import Head from "next/head"
 const SITE_URL = "https://nathan-rgs.vercel.app"
 const title = `${profile.name}, ${profile.role}`
 const description =
-  "Full Stack Developer building fast, reliable web products with TypeScript, Vue, React and Node.js. Now at Omie, previously Fraunhofer IPT in Germany."
+  "Full Stack Developer building CRM products end to end with Python, FastAPI and AWS Serverless, plus Vue and React. Now at Omie, previously Fraunhofer IPT in Germany."
 
 const Home = () => (
   <>
